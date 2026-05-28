@@ -40,7 +40,7 @@
       <p class="hero-text">Natur pur erleben – in ruhiger, unverbauter Lage im Herzen des Kleinwalsertals. Bio-Landwirtschaft, gemütliche Zimmer und Ferienwohnungen mit Bergblick.</p>
       <div class="hero-buttons">
         <a href="zimmer.html" class="btn btn-primary">Zimmer ansehen</a>
-        <a href="#kontakt" class="btn btn-outline">Jetzt anfragen</a>
+        <a href="zimmer.html" class="btn btn-outline">Alle Zimmer ansehen</a>
       </div>
     </div>
   </section>
@@ -298,128 +298,126 @@
 
       <div class="tab-panel active" id="tab-sommer">
         <p class="price-note">Sommerpreise 2026 <strong>inkl. Bergbahn Unlimited-Ticket</strong> (Mai – Anfang November). Ab 5 Übernachtungen.</p>
-        <div class="price-tables">
-          <div class="price-table-wrap">
-            <h3>Ferienwohnung B</h3>
-            <table class="price-table">
-              <thead><tr><th>Belegung</th><th>Preis/Nacht</th></tr></thead>
-              <tbody>
-                <tr><td>2 Personen</td><td>ab <strong>95,– €</strong></td></tr>
-                <tr><td>Jede weitere Person ab 14 J.</td><td>+ 25,– €</td></tr>
-                <tr><td>Kinder bis 5 Jahre</td><td>+ 12,– €</td></tr>
-                <tr><td>Kinder 6–13 Jahre</td><td>+ 17,– €</td></tr>
-              </tbody>
-            </table>
-            <p class="price-info">Gästetaxe ab 14 J.: 4,40 €/Person/Nacht · Endreinigung: 60,– €<br>Bettwäsche &amp; Handtücher vorhanden</p>
+        <div class="price-slider-outer">
+          <button class="ps-arrow ps-left" onclick="pSlide('s',-1)">&#8249;</button>
+          <div class="price-slider-viewport">
+            <div class="price-slider-track" id="ps-s">
+              <div class="price-slide">
+                <div class="price-table-wrap">
+                  <h3>Doppelzimmer inkl. Frühstück</h3>
+                  <table class="price-table">
+                    <thead><tr><th>Belegung</th><th>Pro Person/Nacht</th></tr></thead>
+                    <tbody>
+                      <tr><td>Doppelzimmer</td><td>ab <strong>44,– bis 47,– €</strong></td></tr>
+                      <tr><td>Einzelbelegung</td><td>ab <strong>54,– bis 57,– €</strong></td></tr>
+                      <tr><td>Kinderermäßigung</td><td>je nach Alter</td></tr>
+                    </tbody>
+                  </table>
+                  <p class="price-info">Gästetaxe ab 14 J.: 4,40 €/Person/Nacht · Ab 4 Übernachtungen</p>
+                </div>
+              </div>
+              <div class="price-slide">
+                <div class="price-table-wrap">
+                  <h3>Ferienwohnung A</h3>
+                  <table class="price-table">
+                    <thead><tr><th>Belegung</th><th>Preis/Nacht</th></tr></thead>
+                    <tbody>
+                      <tr><td>2 Personen</td><td>ab <strong>90,– €</strong></td></tr>
+                      <tr><td>Jede weitere Person ab 14 J.</td><td>+ 25,– €</td></tr>
+                      <tr><td>Kinder bis 5 Jahre</td><td>+ 12,– €</td></tr>
+                      <tr><td>Kinder 6–13 Jahre</td><td>+ 17,– €</td></tr>
+                    </tbody>
+                  </table>
+                  <p class="price-info">Gästetaxe ab 14 J.: 4,40 €/Person/Nacht · Endreinigung: 60,– €<br>Bettwäsche &amp; Handtücher vorhanden</p>
+                </div>
+              </div>
+              <div class="price-slide">
+                <div class="price-table-wrap">
+                  <h3>Ferienwohnung B</h3>
+                  <table class="price-table">
+                    <thead><tr><th>Belegung</th><th>Preis/Nacht</th></tr></thead>
+                    <tbody>
+                      <tr><td>2 Personen</td><td>ab <strong>95,– €</strong></td></tr>
+                      <tr><td>Jede weitere Person ab 14 J.</td><td>+ 25,– €</td></tr>
+                      <tr><td>Kinder bis 5 Jahre</td><td>+ 12,– €</td></tr>
+                      <tr><td>Kinder 6–13 Jahre</td><td>+ 17,– €</td></tr>
+                    </tbody>
+                  </table>
+                  <p class="price-info">Gästetaxe ab 14 J.: 4,40 €/Person/Nacht · Endreinigung: 60,– €<br>Bettwäsche &amp; Handtücher vorhanden</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="price-table-wrap">
-            <h3>Ferienwohnung A</h3>
-            <table class="price-table">
-              <thead><tr><th>Belegung</th><th>Preis/Nacht</th></tr></thead>
-              <tbody>
-                <tr><td>2 Personen</td><td>ab <strong>90,– €</strong></td></tr>
-                <tr><td>Jede weitere Person ab 14 J.</td><td>+ 25,– €</td></tr>
-                <tr><td>Kinder bis 5 Jahre</td><td>+ 12,– €</td></tr>
-                <tr><td>Kinder 6–13 Jahre</td><td>+ 17,– €</td></tr>
-              </tbody>
-            </table>
-            <p class="price-info">Gästetaxe ab 14 J.: 4,40 €/Person/Nacht · Endreinigung: 60,– €<br>Bettwäsche &amp; Handtücher vorhanden</p>
-          </div>
-          <div class="price-table-wrap">
-            <h3>Doppelzimmer inkl. Frühstück</h3>
-            <table class="price-table">
-              <thead><tr><th>Belegung</th><th>Pro Person/Nacht</th></tr></thead>
-              <tbody>
-                <tr><td>Doppelzimmer</td><td>ab <strong>44,– bis 47,– €</strong></td></tr>
-                <tr><td>Einzelbelegung</td><td>ab <strong>54,– bis 57,– €</strong></td></tr>
-                <tr><td>Kinderermäßigung</td><td>je nach Alter</td></tr>
-              </tbody>
-            </table>
-            <p class="price-info">Gästetaxe ab 14 J.: 4,40 €/Person/Nacht · Ab 4 Übernachtungen</p>
-          </div>
+          <button class="ps-arrow ps-right" onclick="pSlide('s',1)">&#8250;</button>
+        </div>
+        <div class="ps-dots" id="dots-s">
+          <button class="ps-dot active" onclick="pGoTo('s',0)"></button>
+          <button class="ps-dot" onclick="pGoTo('s',1)"></button>
+          <button class="ps-dot" onclick="pGoTo('s',2)"></button>
         </div>
         <p class="price-legal">Das Bergbahnticket wird ab 14 Jahren berechnet. Haustiere leider nicht möglich. Wir empfehlen eine <strong>Reiserücktrittsversicherung</strong> (z. B. Elvia). Bei Stornierungen gelten gesonderte <strong>Stornogebühren</strong> — bitte bei Buchung erfragen.</p>
       </div>
 
       <div class="tab-panel" id="tab-winter">
         <p class="price-note">Winterpreise. Ab 5 Übernachtungen (FW) bzw. 4 Übernachtungen (Zimmer).</p>
-        <div class="price-tables">
-          <div class="price-table-wrap">
-            <h3>Ferienwohnung B</h3>
-            <table class="price-table">
-              <thead><tr><th>Belegung</th><th>Weihn./Fasching</th><th>Hauptsaison</th></tr></thead>
-              <tbody>
-                <tr><td>2 Personen</td><td>ab <strong>108,– €</strong></td><td>ab <strong>98,– €</strong></td></tr>
-                <tr><td>Jede weitere Person ab 14 J.</td><td>+ 25,– €</td><td>+ 25,– €</td></tr>
-                <tr><td>Kinder unter 5 Jahre</td><td>+ 10,– €</td><td>+ 10,– €</td></tr>
-                <tr><td>Kinder 6–13 Jahre</td><td>+ 17,– €</td><td>+ 17,– €</td></tr>
-              </tbody>
-            </table>
-            <p class="price-info">Gästetaxe ab 14 J.: 4,70 €/Person/Nacht · Endreinigung: 60,– €</p>
+        <div class="price-slider-outer">
+          <button class="ps-arrow ps-left" onclick="pSlide('w',-1)">&#8249;</button>
+          <div class="price-slider-viewport">
+            <div class="price-slider-track" id="ps-w">
+              <div class="price-slide">
+                <div class="price-table-wrap">
+                  <h3>Doppelzimmer inkl. Frühstück</h3>
+                  <table class="price-table">
+                    <thead><tr><th>Belegung</th><th>Pro Person/Nacht</th></tr></thead>
+                    <tbody>
+                      <tr><td>Doppelzimmer</td><td>ab <strong>47,– bis 52,– €</strong></td></tr>
+                      <tr><td>Einzelbelegung</td><td>ab <strong>57,– bis 62,– €</strong></td></tr>
+                      <tr><td>Kinderermäßigung</td><td>je nach Alter</td></tr>
+                    </tbody>
+                  </table>
+                  <p class="price-info">Gästetaxe ab 14 J.: 4,70 €/Person/Nacht · Ab 4 Übernachtungen</p>
+                </div>
+              </div>
+              <div class="price-slide">
+                <div class="price-table-wrap">
+                  <h3>Ferienwohnung A</h3>
+                  <table class="price-table">
+                    <thead><tr><th>Belegung</th><th>Weihn./Fasching</th><th>Hauptsaison</th></tr></thead>
+                    <tbody>
+                      <tr><td>2 Personen</td><td>ab <strong>103,– €</strong></td><td>ab <strong>93,– €</strong></td></tr>
+                      <tr><td>Jede weitere Person ab 14 J.</td><td>+ 25,– €</td><td>+ 25,– €</td></tr>
+                      <tr><td>Kinder unter 5 Jahre</td><td>+ 10,– €</td><td>+ 10,– €</td></tr>
+                      <tr><td>Kinder 6–13 Jahre</td><td>+ 17,– €</td><td>+ 17,– €</td></tr>
+                    </tbody>
+                  </table>
+                  <p class="price-info">Gästetaxe ab 14 J.: 4,70 €/Person/Nacht · Endreinigung: 60,– €</p>
+                </div>
+              </div>
+              <div class="price-slide">
+                <div class="price-table-wrap">
+                  <h3>Ferienwohnung B</h3>
+                  <table class="price-table">
+                    <thead><tr><th>Belegung</th><th>Weihn./Fasching</th><th>Hauptsaison</th></tr></thead>
+                    <tbody>
+                      <tr><td>2 Personen</td><td>ab <strong>108,– €</strong></td><td>ab <strong>98,– €</strong></td></tr>
+                      <tr><td>Jede weitere Person ab 14 J.</td><td>+ 25,– €</td><td>+ 25,– €</td></tr>
+                      <tr><td>Kinder unter 5 Jahre</td><td>+ 10,– €</td><td>+ 10,– €</td></tr>
+                      <tr><td>Kinder 6–13 Jahre</td><td>+ 17,– €</td><td>+ 17,– €</td></tr>
+                    </tbody>
+                  </table>
+                  <p class="price-info">Gästetaxe ab 14 J.: 4,70 €/Person/Nacht · Endreinigung: 60,– €</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="price-table-wrap">
-            <h3>Ferienwohnung A</h3>
-            <table class="price-table">
-              <thead><tr><th>Belegung</th><th>Weihn./Fasching</th><th>Hauptsaison</th></tr></thead>
-              <tbody>
-                <tr><td>2 Personen</td><td>ab <strong>103,– €</strong></td><td>ab <strong>93,– €</strong></td></tr>
-                <tr><td>Jede weitere Person ab 14 J.</td><td>+ 25,– €</td><td>+ 25,– €</td></tr>
-                <tr><td>Kinder unter 5 Jahre</td><td>+ 10,– €</td><td>+ 10,– €</td></tr>
-                <tr><td>Kinder 6–13 Jahre</td><td>+ 17,– €</td><td>+ 17,– €</td></tr>
-              </tbody>
-            </table>
-            <p class="price-info">Gästetaxe ab 14 J.: 4,70 €/Person/Nacht · Endreinigung: 60,– €</p>
-          </div>
-          <div class="price-table-wrap">
-            <h3>Doppelzimmer inkl. Frühstück</h3>
-            <table class="price-table">
-              <thead><tr><th>Belegung</th><th>Pro Person/Nacht</th></tr></thead>
-              <tbody>
-                <tr><td>Doppelzimmer</td><td>ab <strong>47,– bis 52,– €</strong></td></tr>
-                <tr><td>Einzelbelegung</td><td>ab <strong>57,– bis 62,– €</strong></td></tr>
-                <tr><td>Kinderermäßigung</td><td>je nach Alter</td></tr>
-              </tbody>
-            </table>
-            <p class="price-info">Gästetaxe ab 14 J.: 4,70 €/Person/Nacht · Ab 4 Übernachtungen</p>
-          </div>
+          <button class="ps-arrow ps-right" onclick="pSlide('w',1)">&#8250;</button>
+        </div>
+        <div class="ps-dots" id="dots-w">
+          <button class="ps-dot active" onclick="pGoTo('w',0)"></button>
+          <button class="ps-dot" onclick="pGoTo('w',1)"></button>
+          <button class="ps-dot" onclick="pGoTo('w',2)"></button>
         </div>
         <p class="price-legal">Haustiere leider nicht möglich. Wir empfehlen eine <strong>Reiserücktrittsversicherung</strong> (z. B. Elvia). Stornogebühren bei Buchungsabbruch — bitte bei Anfrage erfragen.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOFCHRONIK -->
-  <section id="hofchronik" class="section hofchronik alt-bg">
-    <div class="container">
-      <span class="section-tag">Geschichte</span>
-      <h2 class="section-title">Hofchronik</h2>
-      <p class="section-intro">Der Bergbauernhof Rinner blickt auf über 130 Jahre Geschichte zurück – heute bereits in der 4. Generation. Wir sind Mitglied bei der Direktvermarktung <strong>Walser Buura</strong> im Kleinwalsertal.</p>
-      <p class="section-intro" style="margin-bottom:40px">Den Sommer verbringen unsere Kühe auf der <strong>Zwerenalpe</strong>, die von unserem Sohn Tobias mit Familie bewirtschaftet wird. Patricia verwöhnt euch dort mit selbstgemachten Kuchen, herzhaften Brotzeiten und vielen weiteren Köstlichkeiten.</p>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-year">1891</div>
-          <div class="timeline-content"><h3>Die Heimat wird erworben</h3><p>Außerschwende 46 erwerben die 8 Kinder der Eheleute Ernst. 1896 geht der Hof Josef Ernst als Alleinerbe über.</p></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">1927</div>
-          <div class="timeline-content"><h3>Erste Gästevermietung</h3><p>Josef Ernst übergibt an Sohn Max Ernst – die erste Gästevermietung beginnt.</p></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">1965</div>
-          <div class="timeline-content"><h3>Umbau &amp; Erweiterung</h3><p>Ludwig und Gerda Ernst renovieren die Zimmer, bauen die Gästevermietung aus und erweitern den Kuhstall.</p></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">1994</div>
-          <div class="timeline-content"><h3>Familie Rinner übernimmt</h3><p>Barbara und Oliver Rinner übernehmen. 1996 wird Teile des Hauses abgerissen und neu aufgebaut.</p></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2004</div>
-          <div class="timeline-content"><h3>Moderner Laufstall</h3><p>Neuer Laufstall für 12 Milchkühe – mehr Tierwohl und Platz.</p></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2021</div>
-          <div class="timeline-content"><h3>Freiheit für alle Tiere</h3><p>Auch der Jungviehstall wird zum Laufstall umgebaut. 2025 folgt Heulager &amp; Heubelüftung mit Förderung von EU, Bund und Land.</p></div>
-        </div>
       </div>
     </div>
   </section>
@@ -502,48 +500,23 @@
   <!-- KONTAKT -->
   <section id="kontakt" class="section kontakt alt-bg">
     <div class="container">
-      <span class="section-tag">Kontakt &amp; Buchung</span>
-      <h2 class="section-title">Kontakt &amp; Anfrage</h2>
-      <p class="section-intro">Schreiben Sie uns — wir freuen uns auf Ihre Nachricht und antworten so schnell wie möglich.</p>
-      <div class="kontakt-grid">
-        <form class="kontakt-form" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group"><label for="name">Name *</label><input type="text" id="name" required placeholder="Ihr Name"></div>
-            <div class="form-group"><label for="email">E-Mail *</label><input type="email" id="email" required placeholder="ihre@email.de"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label for="reisezeitraum">Reisezeitraum</label><input type="text" id="reisezeitraum" placeholder="z. B. 15.07. – 22.07.2026"></div>
-            <div class="form-group"><label for="personen">Personen</label><input type="text" id="personen" placeholder="z. B. 2 Erw. + 1 Kind"></div>
-          </div>
-          <div class="form-group">
-            <label for="unterkunft">Gewünschte Unterkunft</label>
-            <select id="unterkunft">
-              <option value="">Bitte wählen…</option>
-              <option>Zimmer 2 (Doppelzimmer, 21 m²)</option>
-              <option>Zimmer 3 (Doppelzimmer, 18 m²)</option>
-              <option>Zimmer 5 (Mehrbettzimmer, 23 m²)</option>
-              <option>Zimmer 6 (Doppelzimmer, 23 m²)</option>
-              <option>Ferienwohnung A (53 m²)</option>
-              <option>Ferienwohnung B (57 m²)</option>
-              <option>Noch unentschieden</option>
-            </select>
-          </div>
-          <div class="form-group"><label for="nachricht">Nachricht</label><textarea id="nachricht" rows="5" placeholder="Ihre Fragen oder Wünsche…"></textarea></div>
-          <button type="submit" class="btn btn-primary btn-full">Anfrage absenden</button>
-          <p class="form-note">* Pflichtfelder. Ihre Daten werden vertraulich behandelt.</p>
-        </form>
-        <div class="kontakt-info">
-          <div class="kontakt-card">
-            <h3>Direkt erreichen</h3>
-            <div class="kontakt-item"><span class="kontakt-icon">&#128222;</span><div><strong>Telefon</strong><a href="tel:+435517671400">0043 / 5517 / 6714</a></div></div>
-            <div class="kontakt-item"><span class="kontakt-icon">&#128241;</span><div><strong>Handy</strong><a href="tel:+436763896566">0043 676 3896566</a></div></div>
-            <div class="kontakt-item"><span class="kontakt-icon">&#9993;</span><div><strong>E-Mail</strong><a href="mailto:info@bergbauernhof-rinner.de">info@bergbauernhof-rinner.de</a></div></div>
-            <div class="kontakt-item"><span class="kontakt-icon">&#127968;</span><div><strong>Adresse</strong><address>Außerschwende 46<br>A-6991 Riezlern · D-87567 Riezlern<br>Kleinwalsertal, Österreich</address></div></div>
-          </div>
+      <span class="section-tag">Kontakt</span>
+      <h2 class="section-title">So erreichen Sie uns</h2>
+      <p class="section-intro">Rufen Sie uns an oder schreiben Sie uns eine E-Mail — Familie Rinner freut sich auf Ihre Nachricht.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:860px">
+        <div class="kontakt-card">
+          <h3>Direkt erreichen</h3>
+          <div class="kontakt-item"><span class="kontakt-icon">&#128222;</span><div><strong>Telefon</strong><a href="tel:+435517671400">0043 / 5517 / 6714</a></div></div>
+          <div class="kontakt-item"><span class="kontakt-icon">&#128241;</span><div><strong>Handy</strong><a href="tel:+436763896566">0043 676 3896566</a></div></div>
+          <div class="kontakt-item"><span class="kontakt-icon">&#9993;</span><div><strong>E-Mail</strong><a href="mailto:info@bergbauernhof-rinner.de">info@bergbauernhof-rinner.de</a></div></div>
+          <div class="kontakt-item"><span class="kontakt-icon">&#127968;</span><div><strong>Adresse</strong><address>Außerschwende 46<br>A-6991 Riezlern · D-87567 Riezlern<br>Kleinwalsertal, Österreich</address></div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px">
           <div class="bergbahn-box">
             <img src="bilder/bergbahn-inklusive-im-kleinwalsertal.jpg" alt="Bergbahn inklusive">
             <p><strong>Sommer: Bergbahn inklusive!</strong><br>Unlimited-Ticket für Oberstdorf+Kleinwalsertal bei jeder Buchung.</p>
           </div>
+          <a href="zimmer.html" class="btn btn-primary" style="text-align:center">Zimmer &amp; Preise ansehen</a>
         </div>
       </div>
     </div>
@@ -624,12 +597,25 @@
       });
     });
 
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.textContent = 'Anfrage gesendet ✓';
-      btn.disabled = true;
-      btn.style.background = '#2D5016';
+    // Price Slider
+    const pIdx = { s: 0, w: 0 };
+    const pCount = 3;
+
+    function pSlide(k, dir) {
+      pIdx[k] = (pIdx[k] + dir + pCount) % pCount;
+      pUpdate(k);
+    }
+
+    function pGoTo(k, i) {
+      pIdx[k] = i;
+      pUpdate(k);
+    }
+
+    function pUpdate(k) {
+      document.getElementById('ps-' + k).style.transform = `translateX(-${pIdx[k] * 100}%)`;
+      document.querySelectorAll('#dots-' + k + ' .ps-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === pIdx[k]);
+      });
     }
   </script>
 </body>

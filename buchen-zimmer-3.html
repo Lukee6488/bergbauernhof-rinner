@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zimmer 3 buchen – Bergbauernhof Rinner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="bilder/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="bilder/logo.png" alt="Bergbauernhof Rinner" class="logo-img"><span class="nav-title">Bergbauernhof Rinner</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="zimmer.html" class="active-link">Zimmer &amp; Ferienwohnungen</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="ueber-uns.html">Bauernhof</a></li>
+        <li><a href="index.html#kontakt" class="nav-cta">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="booking-header">
+    <div class="container">
+      <nav class="booking-breadcrumb">
+        <a href="index.html">Startseite</a><span>›</span>
+        <a href="zimmer.html">Zimmer &amp; Ferienwohnungen</a><span>›</span>
+        <a href="zimmer-3.html">Zimmer 3</a><span>›</span><span>Buchen</span>
+      </nav>
+      <h1 class="booking-title">Zimmer 3 buchen</h1>
+      <p class="booking-subtitle">Doppelzimmer &middot; ca. 18 m² &middot; inkl. Frühstück</p>
+    </div>
+  </div>
+
+  <section class="booking-section">
+    <div class="container">
+      <div class="booking-layout">
+        <div class="booking-main">
+          <div class="room-mini-card">
+            <img class="room-mini-photo" src="https://image.jimcdn.com/app/cms/image/transf/none/path/s64a9abb7e1fcdabf/image/i479c6f68cf66876a/version/1301416368/image.jpg" alt="Zimmer 3">
+            <div class="room-mini-info">
+              <h3>Zimmer 3 – Doppelzimmer</h3>
+              <p>Außerschwende 46, A-6991 Riezlern · Kleinwalsertal, Österreich</p>
+              <div class="room-mini-badges">
+                <span class="mini-badge">18 m²</span>
+                <span class="mini-badge">Frühstück inklusive</span>
+                <span class="mini-badge">WLAN</span>
+                <span class="mini-badge">Sat-TV</span>
+                <span class="mini-badge">Sitzgruppe</span>
+                <span class="mini-badge">Nichtraucherzimmer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calendar-wrap">
+            <div class="calendar-top">
+              <h3>Verfügbarkeit &amp; Datum wählen</h3>
+              <div class="cal-nav">
+                <button class="cal-nav-btn" id="prevBtn" onclick="navigate(-1)">&#8249;</button>
+                <button class="cal-nav-btn" id="nextBtn" onclick="navigate(1)">&#8250;</button>
+              </div>
+            </div>
+            <div class="cal-months-grid">
+              <div class="cal-month-panel" id="month0"></div>
+              <div class="cal-month-panel" id="month1"></div>
+            </div>
+            <div class="cal-legend">
+              <div class="legend-item"><div class="legend-dot avail"></div>Verfügbar</div>
+              <div class="legend-item"><div class="legend-dot blocked"></div>Belegt</div>
+              <div class="legend-item"><div class="legend-dot sel"></div>An-/Abreise</div>
+              <div class="legend-item"><div class="legend-dot range"></div>Ausgewählt</div>
+            </div>
+          </div>
+
+          <div class="min-stay-notice"><span>ℹ</span><span>Mindestaufenthalt: <strong>4 Nächte</strong>. Bei kürzerem Aufenthalt wird ein Kurzzeitaufschlag berechnet.</span></div>
+
+          <div class="booking-form-wrap" id="bookingForm">
+            <h2>Buchungsanfrage senden</h2>
+            <p class="form-intro">Füllen Sie das Formular aus – Familie Rinner antwortet in der Regel innerhalb von 24 Stunden. Die Buchung ist erst nach schriftlicher Bestätigung verbindlich.</p>
+            <form onsubmit="handleSubmit(event)" novalidate>
+              <div class="fsect">Reisezeitraum</div>
+              <div class="fg">
+                <div class="ff"><label for="f_an">Anreise *</label><input type="text" id="f_an" placeholder="Datum im Kalender wählen" required readonly></div>
+                <div class="ff"><label for="f_ab">Abreise *</label><input type="text" id="f_ab" placeholder="Datum im Kalender wählen" required readonly></div>
+                <div class="ff"><label for="f_n">Anzahl Nächte</label><input type="text" id="f_n" placeholder="–" readonly></div>
+                <div class="ff"><label for="f_zeit">Voraussichtliche Anreisezeit</label><select id="f_zeit"><option value="">Bitte wählen</option><option>14:00 – 16:00 Uhr</option><option>16:00 – 18:00 Uhr</option><option>18:00 – 20:00 Uhr</option><option>Nach 20:00 Uhr</option></select></div>
+              </div>
+              <div class="fsect">Personen</div>
+              <div class="fg three">
+                <div class="ff"><label for="f_erw">Erwachsene (ab 14 J.) *</label><select id="f_erw" required><option value="1">1 Person</option><option value="2" selected>2 Personen</option></select></div>
+                <div class="ff"><label for="f_kind">Kinder (0–13 J.)</label><select id="f_kind"><option value="0" selected>Keine</option><option value="1">1 Kind</option></select></div>
+                <div class="ff"><label for="f_alter">Alter der Kinder</label><input type="text" id="f_alter" placeholder="z. B. 5, 8"></div>
+              </div>
+              <div class="fsect">Ihre Kontaktdaten</div>
+              <div class="fg">
+                <div class="ff"><label for="f_vor">Vorname *</label><input type="text" id="f_vor" required placeholder="Vorname"></div>
+                <div class="ff"><label for="f_nach">Nachname *</label><input type="text" id="f_nach" required placeholder="Nachname"></div>
+                <div class="ff"><label for="f_mail">E-Mail *</label><input type="email" id="f_mail" required placeholder="ihre@email.de"></div>
+                <div class="ff"><label for="f_tel">Telefon</label><input type="tel" id="f_tel" placeholder="+49 oder +43 …"></div>
+                <div class="ff s2"><label for="f_ort">Wohnort &amp; Land</label><input type="text" id="f_ort" placeholder="z. B. München, Deutschland"></div>
+              </div>
+              <div class="fsect">Sonstiges</div>
+              <div class="fg"><div class="ff s2"><label for="f_msg">Sonderwünsche &amp; Anmerkungen</label><textarea id="f_msg" placeholder="Fragen, besondere Wünsche …"></textarea></div></div>
+              <div>
+                <div class="fcheck"><input type="checkbox" id="f_storno" required><label for="f_storno">Ich habe die Stornierungsbedingungen zur Kenntnis genommen. *</label></div>
+                <div class="fcheck"><input type="checkbox" id="f_dsgvo" required><label for="f_dsgvo">Ich stimme der Verarbeitung meiner Daten gemäß <a href="impressum.html">Datenschutzerklärung</a> zu. *</label></div>
+              </div>
+              <div><button type="submit" class="btn-submit">✉&nbsp; Buchungsanfrage senden</button><p class="freq-note">* Pflichtfelder. Erst nach schriftlicher Bestätigung durch Familie Rinner ist die Buchung verbindlich.</p></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="booking-sidebar">
+          <div class="booking-card">
+            <div class="booking-card-header"><h3>Ihre Buchung</h3><p>Zimmer 3 – Doppelzimmer</p></div>
+            <div class="booking-card-body">
+              <div class="dates-display">
+                <div class="date-field"><div class="date-field-label">Anreise</div><div class="date-field-value ph" id="sd_an">Datum wählen</div></div>
+                <div class="date-field"><div class="date-field-label">Abreise</div><div class="date-field-value ph" id="sd_ab">Datum wählen</div></div>
+              </div>
+              <div class="guest-sel-title">Reisende</div>
+              <div class="guest-row"><div><div class="guest-row-lbl">Erwachsene</div><div class="guest-row-sub">ab 14 Jahre</div></div><div class="guest-ctr"><button class="g-btn" id="a-" onclick="changeG('a',-1)">−</button><span class="g-cnt" id="a-cnt">2</span><button class="g-btn" id="a+" onclick="changeG('a',1)">+</button></div></div>
+              <div class="guest-row"><div><div class="guest-row-lbl">Kinder</div><div class="guest-row-sub">unter 14 Jahre</div></div><div class="guest-ctr"><button class="g-btn" id="c-" onclick="changeG('c',-1)" disabled>−</button><span class="g-cnt" id="c-cnt">0</span><button class="g-btn" id="c+" onclick="changeG('c',1)">+</button></div></div>
+              <div id="priceBox"><p class="price-ph">Bitte An- und Abreise im Kalender wählen</p></div>
+              <button class="btn-book" id="btnBook" onclick="scrollToForm()" disabled>Zur Buchungsanfrage ↓</button>
+              <p class="booking-note">Unverbindlich &middot; Kostenlos &middot; Keine Kreditkarte</p>
+            </div>
+          </div>
+          <div class="contact-mini-card">
+            <div class="cmc-title">Fragen? Direkt anrufen:</div>
+            <a href="tel:+435517671400">📞 0043 / 5517 / 6714</a>
+            <a href="tel:+436763896566" style="font-size:0.85rem;color:var(--text-lt);font-weight:400">📱 0043 676 3896566</a>
+            <p class="cmc-hours">Mo – Sa &middot; 8–20 Uhr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-col"><img src="bilder/logo.png" alt="Bergbauernhof Rinner" class="footer-logo"><p>Bergbauernhof Rinner · Fam. Rinner<br>Außerschwende 46 · A-6991 Riezlern</p></div><div class="footer-col"><h4>Kontakt</h4><p>Tel: <a href="tel:+435517671400">0043/5517/6714</a><br><a href="mailto:info@bergbauernhof-rinner.de">info@bergbauernhof-rinner.de</a></p></div><div class="footer-col"><h4>Zimmer</h4><ul class="footer-nav"><li><a href="zimmer-2.html">Zimmer 2</a></li><li><a href="zimmer-3.html">Zimmer 3</a></li><li><a href="zimmer-5.html">Zimmer 5</a></li><li><a href="zimmer-6.html">Zimmer 6</a></li><li><a href="ferienwohnung-a.html">Ferienwohnung A</a></li><li><a href="ferienwohnung-b.html">Ferienwohnung B</a></li></ul></div><div class="footer-col"><h4>Partner</h4><div class="partner-logos"><img src="bilder/bergbahn-inklusive-im-kleinwalsertal.jpg" alt="Bergbahn"><img src="bilder/urlaub-im-kleinwalsertal.png" alt="Kleinwalsertal"></div></div></div><div class="footer-bottom"><p>© 2025 Bergbauernhof Rinner · Alle Rechte vorbehalten</p></div></div></footer>
+
+  <div class="confirm-overlay" id="confirmOverlay"><div class="confirm-card"><div class="confirm-icon">✅</div><h2>Anfrage gesendet!</h2><p>Vielen Dank für Ihre Buchungsanfrage für <strong>Zimmer 3</strong>.</p><p>Familie Rinner meldet sich innerhalb von 24 Stunden per E-Mail.</p><button class="btn-close-confirm" onclick="window.location.href='index.html'">Zur Startseite</button></div></div>
+  <div class="watermark">Nicht zur offiziellen Nutzung gedacht</div>
+
+  <script>
+    const IS_FW=false,P_SOM=44,P_WIN=47,MIN_ST=4,MAX_A=2,MAX_C=1;
+    const BLOCKED=[['2026-06-13','2026-06-20'],['2026-07-04','2026-07-18'],['2026-08-01','2026-08-15'],['2026-08-22','2026-08-29'],['2026-09-06','2026-09-13'],['2026-12-19','2027-01-02'],['2027-02-07','2027-02-21'],['2027-04-10','2027-04-17']];
+    const MONTHS=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+    const today=new Date();today.setHours(0,0,0,0);const todayS=ds(today);
+    let vy=today.getFullYear(),vm=today.getMonth(),ci=null,co=null,hov=null,adults=2,kids=0;
+    function ds(d){return`${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;}function p(n){return String(n).padStart(2,'0');}function parse(s){const[y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d);}function deDE(s){const[y,m,d]=s.split('-');return`${d}.${m}.${y}`;}function isPast(s){return s<todayS;}function isBlk(s){return BLOCKED.some(([a,b])=>s>=a&&s<=b);}function blkInRange(a,b){return BLOCKED.some(([s,e])=>s<b&&e>a);}function nights(){if(!ci||!co)return 0;return Math.round((parse(co)-parse(ci))/864e5);}function isSommer(s){const m=+s.split('-')[1];return m>=5&&m<=10;}
+    function render(){renderM('month0',vy,vm);let m2=vm+1,y2=vy;if(m2>11){m2=0;y2++;}renderM('month1',y2,m2);document.getElementById('prevBtn').disabled=(vy===today.getFullYear()&&vm===today.getMonth());}
+    function renderM(id,y,m){const el=document.getElementById(id);const dim=new Date(y,m+1,0).getDate();const off=(new Date(y,m,1).getDay()+6)%7;let h=`<div class="cal-month-name">${MONTHS[m]} ${y}</div>`;h+='<div class="cal-weekdays">';for(const d of['Mo','Di','Mi','Do','Fr','Sa','So'])h+=`<div class="cal-weekday">${d}</div>`;h+='</div><div class="cal-days">';for(let i=0;i<off;i++)h+='<div class="cal-day empty"></div>';for(let d=1;d<=dim;d++){const s=`${y}-${p(m+1)}-${p(d)}`;h+=`<div class="cal-day ${cls(s)}" onclick="click_('${s}')" onmouseenter="hover_('${s}')" onmouseleave="leave_()">${d}</div>`;}h+='</div>';el.innerHTML=h;}
+    function cls(s){if(isPast(s))return'past';if(isBlk(s))return'blocked';let c='available';if(s===todayS)c+=' today';if(s===ci)c+=' sel-start';if(s===co)c+=' sel-end';const end=co||(hov&&ci&&!co&&hov>ci?hov:null);if(ci&&end&&s>ci&&s<end)c+=' in-range';return c;}
+    function click_(s){if(isPast(s)||isBlk(s))return;if(!ci||(ci&&co)){ci=s;co=null;}else if(s<=ci){ci=s;co=null;}else if(blkInRange(ci,s)){ci=s;co=null;}else{co=s;}render();updateSidebar();syncForm();}
+    function hover_(s){if(ci&&!co){hov=s;render();}}function leave_(){hov=null;render();}
+    function navigate(d){vm+=d;if(vm>11){vm=0;vy++;}if(vm<0){vm=11;vy--;}if(vy<today.getFullYear()||(vy===today.getFullYear()&&vm<today.getMonth())){vy=today.getFullYear();vm=today.getMonth();}render();}
+    function changeG(t,d){if(t==='a'){adults=Math.max(1,Math.min(MAX_A,adults+d));document.getElementById('a-cnt').textContent=adults;document.getElementById('a-').disabled=adults<=1;document.getElementById('a+').disabled=adults>=MAX_A;const s=document.getElementById('f_erw');if(s)s.value=String(adults);}else{kids=Math.max(0,Math.min(MAX_C,kids+d));document.getElementById('c-cnt').textContent=kids;document.getElementById('c-').disabled=kids<=0;document.getElementById('c+').disabled=kids>=MAX_C;const s=document.getElementById('f_kind');if(s)s.value=String(kids);}updateSidebar();}
+    function updateSidebar(){const anEl=document.getElementById('sd_an'),abEl=document.getElementById('sd_ab');if(ci){anEl.textContent=deDE(ci);anEl.classList.remove('ph');}else{anEl.textContent='Datum wählen';anEl.classList.add('ph');}if(co){abEl.textContent=deDE(co);abEl.classList.remove('ph');}else{abEl.textContent='Datum wählen';abEl.classList.add('ph');}const n=nights();const box=document.getElementById('priceBox');const btn=document.getElementById('btnBook');if(n>0){const pp=isSommer(ci)?P_SOM:P_WIN;const base=IS_FW?pp*n:pp*adults*n;const steuer=(adults*4.40*n);const end=IS_FW?60:0;const kurz=n<MIN_ST?35:0;const tot=base+steuer+end+kurz;let h='';if(IS_FW)h+=`<div class="p-line"><span>${n} Nächte × ${pp} €</span><span>${base.toFixed(0)} €</span></div>`;else h+=`<div class="p-line"><span>${n} Nächte × ${adults} Pers. × ${pp} €</span><span>${base.toFixed(0)} €</span></div>`;h+=`<div class="p-line"><span>Gästetaxe (${adults} Erw., ${n} Nächte)</span><span>${steuer.toFixed(2)} €</span></div>`;if(IS_FW)h+=`<div class="p-line"><span>Endreinigung</span><span>60,00 €</span></div>`;if(kurz>0)h+=`<div class="p-line" style="color:#b85c12"><span>Kurzzeitaufschlag (&lt;${MIN_ST} Nächte)</span><span>~${kurz} €</span></div>`;h+=`<div class="p-total"><span>Geschätzte Gesamtkosten</span><span>${tot.toFixed(2)} €</span></div><p class="p-note-sm">Kinderpreise noch nicht enthalten. Endpreis nach Bestätigung.</p>`;box.innerHTML=h;btn.disabled=false;}else{box.innerHTML='<p class="price-ph">Bitte An- und Abreise wählen</p>';btn.disabled=true;}}
+    function syncForm(){document.getElementById('f_an').value=ci?deDE(ci):'';document.getElementById('f_ab').value=co?deDE(co):'';document.getElementById('f_n').value=nights()>0?nights()+' Nächte':'';}
+    function scrollToForm(){document.getElementById('bookingForm').scrollIntoView({behavior:'smooth',block:'start'});}
+    function handleSubmit(e){e.preventDefault();if(!ci||!co){alert('Bitte wählen Sie zuerst An- und Abreisedatum im Kalender aus.');return;}document.getElementById('confirmOverlay').classList.add('on');}
+    const nt=document.getElementById('navToggle'),nl=document.getElementById('navLinks');nt.addEventListener('click',()=>{nl.classList.toggle('open');nt.classList.toggle('active');});
+    render();updateSidebar();
+  </script>
+</body>
+</html>
