@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zimmer 6 – Doppelzimmer mit Balkon – Bergbauernhof Rinner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="bilder/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="bilder/logo.png" alt="Bergbauernhof Rinner" class="logo-img">
+        <span class="nav-title">Bergbauernhof Rinner</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="zimmer.html" class="active-link">Zimmer &amp; Ferienwohnungen</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="ueber-uns.html">Bauernhof</a></li>
+        <li><a href="index.html#kontakt" class="nav-cta">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Startseite</a><span>›</span>
+        <a href="zimmer.html">Zimmer &amp; Ferienwohnungen</a><span>›</span>
+        <span>Zimmer 6</span>
+      </nav>
+      <h1>Zimmer 6 – Doppelzimmer</h1>
+      <p>Mit Balkon · Dusche/WC · Sat-TV · ca. 23 m²</p>
+    </div>
+  </div>
+
+  <section class="section room-detail">
+    <div class="container">
+      <div class="room-layout">
+
+        <div class="room-gallery">
+          <div class="gallery-main">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s64a9abb7e1fcdabf/image/id9327d0d36e3e1f2/version/1298590536/image.jpg" alt="Zimmer 6 – Ansicht 1" id="activePhoto" loading="eager">
+          </div>
+          <div class="gallery-strip">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s64a9abb7e1fcdabf/image/id9327d0d36e3e1f2/version/1298590536/image.jpg" alt="Bild 1" onclick="setPhoto(this)" class="thumb active" loading="lazy">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s64a9abb7e1fcdabf/image/ib5e28a1577613146/version/1298590536/image.jpg" alt="Bild 2" onclick="setPhoto(this)" class="thumb" loading="lazy">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s64a9abb7e1fcdabf/image/i30408ff0b85e1ec3/version/1298590536/image.jpg" alt="Bild 3" onclick="setPhoto(this)" class="thumb" loading="lazy">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s64a9abb7e1fcdabf/image/ie3eba025f8020a5a/version/1298590536/image.jpg" alt="Bild 4" onclick="setPhoto(this)" class="thumb" loading="lazy">
+          </div>
+        </div>
+
+        <div class="room-info">
+          <span class="badge badge-inline">Doppelzimmer · 23 m²</span>
+          <h2>Zimmer 6</h2>
+          <p class="room-desc">Gemütliches Doppelzimmer mit Dusche/WC, Radio, Sat-TV, einer Sitzgruppe und <strong>Balkon</strong>. Das größte der Doppelzimmer mit ca. 23 m². Bitte beachten Sie: <strong>Nichtraucherzimmer.</strong></p>
+
+          <h3 class="features-title">Ausstattung</h3>
+          <ul class="features-grid">
+            <li>Dusche &amp; WC (en suite)</li>
+            <li>Doppelbett</li>
+            <li>Sat-TV</li>
+            <li>Radio</li>
+            <li>Sitzgruppe</li>
+            <li>Balkon</li>
+            <li>WLAN (kostenlos)</li>
+            <li>Haarföhn</li>
+            <li>Nichtraucherzimmer</li>
+          </ul>
+
+          <div class="room-price-box">
+            <div class="price-row"><span>Sommer (pro Person/Nacht)</span><strong>ab 44,– bis 47,– €</strong></div>
+            <div class="price-row"><span>Winter (pro Person/Nacht)</span><strong>ab 47,– bis 52,– €</strong></div>
+            <p class="price-note-sm">Inkl. reichhaltigem Frühstück. Sommer inkl. Bergbahnticket. Ab 4 Übernachtungen.</p>
+            <a href="index.html#preise" class="price-link">Alle Preise ansehen →</a>
+          </div>
+
+          <div class="room-cta">
+            <a href="index.html#kontakt" class="btn btn-primary btn-full">Zimmer 6 anfragen</a>
+            <a href="zimmer.html" class="btn-back">← Zurück zur Übersicht</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="shared-amenities">
+        <h3>Im Haus verfügbar</h3>
+        <div class="amenity-grid">
+          <div>&#127858; Reichhaltiges Frühstück täglich</div>
+          <div>&#127859; Gästeküche mit Backofen</div>
+          <div>&#9749; Gemütlicher Aufenthaltsraum</div>
+          <div>&#128665; Kostenloser Parkplatz</div>
+          <div>&#128652; Walserbus (kostenlos mit Gästekarte)</div>
+          <div>&#127937; Loipe &amp; Wanderwege direkt am Haus</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><img src="bilder/logo.png" alt="Bergbauernhof Rinner" class="footer-logo"><p>Bergbauernhof Rinner · Fam. Rinner<br>Außerschwende 46 · A-6991 Riezlern</p></div>
+        <div class="footer-col"><h4>Kontakt</h4><p>Tel: <a href="tel:+435517671400">0043/5517/6714</a><br><a href="mailto:info@bergbauernhof-rinner.de">info@bergbauernhof-rinner.de</a></p></div>
+        <div class="footer-col"><h4>Zimmer</h4><ul class="footer-nav"><li><a href="zimmer-2.html">Zimmer 2</a></li><li><a href="zimmer-3.html">Zimmer 3</a></li><li><a href="zimmer-5.html">Zimmer 5</a></li><li><a href="zimmer-6.html">Zimmer 6</a></li><li><a href="ferienwohnung-a.html">Ferienwohnung A</a></li><li><a href="ferienwohnung-b.html">Ferienwohnung B</a></li></ul></div>
+        <div class="footer-col"><h4>Partner</h4><div class="partner-logos"><img src="bilder/bergbahn-inklusive-im-kleinwalsertal.jpg" alt="Bergbahn"><img src="bilder/urlaub-im-kleinwalsertal.png" alt="Kleinwalsertal"></div></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Bergbauernhof Rinner · Alle Rechte vorbehalten</p></div>
+    </div>
+  </footer>
+  <div class="watermark">Nicht zur offiziellen Nutzung gedacht</div>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); navToggle.classList.toggle('active'); });
+    document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => { navLinks.classList.remove('open'); navToggle.classList.remove('active'); }));
+    function setPhoto(el) {
+      document.getElementById('activePhoto').src = el.src;
+      document.querySelectorAll('.gallery-strip .thumb').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+    }
+  </script>
+</body>
+</html>
