@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="bilder/logo.png">
-  <link rel="stylesheet" href="style.css?v=20260528">
+  <link rel="stylesheet" href="style.css?v=20260528b">
 </head>
 <body>
 
@@ -400,7 +400,7 @@
       for(let i=0;i<off;i++) h+='<div class="cal-day empty"></div>';
       for(let d=1;d<=dim;d++){
         const s=`${y}-${p(m+1)}-${p(d)}`;
-        h+=`<div class="cal-day ${cls(s)}" data-date="${s}" onclick="click_('${s}')" onmouseenter="hover_('${s}')" onmouseleave="leave_()">${d}</div>`;
+        h+=`<div class="cal-day ${cls(s)}" data-date="${s}">${d}</div>`;
       }
       h+='</div>';
       el.innerHTML=h;
@@ -445,8 +445,23 @@
       render(); updateSidebar(); syncForm();
     }
 
-    function hover_(s){ if(ci&&!co){hov=s;render();} }
-    function leave_(){ hov=null;render(); }
+    function setupCal(){
+      ['month0','month1'].forEach(id=>{
+        const el=document.getElementById(id);
+        el.addEventListener('click',e=>{
+          const d=e.target.closest('[data-date]');
+          if(d) click_(d.dataset.date);
+        });
+        el.addEventListener('mouseover',e=>{
+          const d=e.target.closest('[data-date]');
+          const s=d?d.dataset.date:null;
+          if(s!==hov){hov=s;if(ci&&!co)render();}
+        });
+        el.addEventListener('mouseleave',()=>{
+          if(hov!==null){hov=null;if(ci&&!co)render();}
+        });
+      });
+    }
 
     function navigate(d){
       vm+=d; if(vm>11){vm=0;vy++;} if(vm<0){vm=11;vy--;}
@@ -538,7 +553,7 @@
     const nt=document.getElementById('navToggle'), nl=document.getElementById('navLinks');
     nt.addEventListener('click',()=>{nl.classList.toggle('open');nt.classList.toggle('active');});
 
-    render(); updateSidebar();
+    render(); updateSidebar(); setupCal();
   </script>
 </body>
 </html>
