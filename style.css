@@ -251,8 +251,16 @@ address { font-style: normal; }
   inset: 0;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  transform-origin: center;
+  background-attachment: scroll;
+  background-image: url('bilder/hero-hintergrund-mobile.jpg');
+}
+
+/* Desktop: grosse Version + Parallax (background-attachment:fixed bricht auf iOS) */
+@media (min-width: 1025px) {
+  .hero-bg {
+    background-image: url('bilder/hero-hintergrund-desktop.jpg');
+    background-attachment: fixed;
+  }
 }
 
 .hero-overlay {
