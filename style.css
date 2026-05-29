@@ -255,7 +255,7 @@ address { font-style: normal; }
   background-image: url('bilder/hero-hintergrund-mobile.jpg');
 }
 
-/* Desktop mit Maus (hover:hover = kein Touch): grosse Version + Parallax */
+/* Desktop mit Maus: grosse Version + CSS-Parallax */
 @media (min-width: 1025px) and (hover: hover) {
   .hero-bg {
     background-image: url('bilder/hero-hintergrund-desktop.jpg');
@@ -263,12 +263,24 @@ address { font-style: normal; }
   }
 }
 
-/* Grosse Touch-Geräte (iPad Landscape etc.): Desktop-Bild, aber kein fixed (bricht iOS) */
-@media (min-width: 1025px) and (hover: none) {
+/* Touch-Geräte (iOS/Android): position:fixed simuliert den Parallax-Effekt */
+@media (hover: none) {
   .hero-bg {
-    background-image: url('bilder/hero-hintergrund-desktop.jpg');
-    background-attachment: scroll;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
   }
+  /* Hero als Stacking-Context damit Overlay + Content über dem fixen Bild liegen */
+  .hero { z-index: 1; }
+  /* Alle Abschnitte brauchen einen soliden Hintergrund, damit sie das fixe Bild überdecken */
+  .section { position: relative; z-index: 1; background: var(--cream); }
+  .alt-bg  { background: #f2ece0; }
+  .footer  { position: relative; z-index: 1; }
+}
+
+/* Grosse Touch-Geräte (iPad Landscape ≥1025px): Desktop-Bild verwenden */
+@media (min-width: 1025px) and (hover: none) {
+  .hero-bg { background-image: url('bilder/hero-hintergrund-desktop.jpg'); }
 }
 
 .hero-overlay {
