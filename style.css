@@ -255,11 +255,19 @@ address { font-style: normal; }
   background-image: url('bilder/hero-hintergrund-mobile.jpg');
 }
 
-/* Desktop: grosse Version + Parallax (background-attachment:fixed bricht auf iOS) */
-@media (min-width: 1025px) {
+/* Desktop mit Maus (hover:hover = kein Touch): grosse Version + Parallax */
+@media (min-width: 1025px) and (hover: hover) {
   .hero-bg {
     background-image: url('bilder/hero-hintergrund-desktop.jpg');
     background-attachment: fixed;
+  }
+}
+
+/* Grosse Touch-Geräte (iPad Landscape etc.): Desktop-Bild, aber kein fixed (bricht iOS) */
+@media (min-width: 1025px) and (hover: none) {
+  .hero-bg {
+    background-image: url('bilder/hero-hintergrund-desktop.jpg');
+    background-attachment: scroll;
   }
 }
 
