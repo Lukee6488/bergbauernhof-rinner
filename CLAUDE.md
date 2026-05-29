@@ -10,6 +10,17 @@ Ursprüngliche Website: bergbauernhof-rinner.de (Jimdo-Basis, gecrawlt und neu a
 - Repository: https://github.com/Lukee6488/bergbauernhof-rinner
 - GitHub-Account: Lukee6488
 
+## Git-Konfiguration – WICHTIG
+Commits müssen immer mit diesem Account gemacht werden, damit Vercel den GitHub-User erkennt:
+- **Name:** `Lukee6488`
+- **E-Mail:** `lukasruschepaul@gmail.com`
+
+Lokale Repo-Konfiguration prüfen/setzen:
+```bash
+git config user.name "Lukee6488"
+git config user.email "lukasruschepaul@gmail.com"
+```
+
 ## Vercel-Workflow – WICHTIG
 **Nach jeder Änderung muss `git push` gemacht werden**, damit Vercel automatisch deployed.
 
